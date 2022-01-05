@@ -1,5 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Route, Routes, Link } from "react-router-dom";
+import About from './components/About.js';
+import Home from './components/Home.js';
 
 function App() {
   return (
@@ -15,14 +18,14 @@ function App() {
             <li>
                 <Link to="/contact">Contact</Link>
             </li>
-            <Switch>
+            <Routes>
               <Route exact path="/">
                 <Home />
-                </Route>
-                <Route path="/about">
-                  <About />
-                  </Route>
-                  </Switch>
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+            </Routes>
         </ul>
     </nav>
 </div>
